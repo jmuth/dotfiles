@@ -1,0 +1,42 @@
+# ========================
+# SPECIFIC CONFIGURATION
+# ========================
+# Low level priority configuration such as computer specific aliases
+
+# navigation (private MBP)
+alias epfl='cd /Users/joachimmuth/Documents/EPFL/'
+alias evento='cd /Users/joachimmuth/Documents/EPFL/SwEngProject/team-localeventapp'
+alias icloud='cd /Users/joachimmuth/Library/Mobile Documents/com~apple~CloudDocs'
+alias pcml='cd /Users/joachimmuth/Documents/EPFL/PCML'
+alias ada='cd /Users/joachimmuth/Documents/EPFL/ADA'
+alias leon="cd ~/Documents/EPFL/leon/leon"
+alias finance="cd /Users/joachimmuth/Google\ Drive/Principles\ of\ Finance_valentin/HW_Roth_Bill_Muth"
+alias microeconomic="cd ~/Documents/EPFL/Micro-ecomonics"
+alias parliamentviz="cd ~/Documents/EPFL/ADA/parliament-viz"
+alias doc="cd ~/Documents"
+alias mac_preferences="cd ~/Documents/mac_preferences"
+alias netflix_and_chill="cd ~/Documents/EPFL/PCML/PCML_Netflix_and_Chill/"
+alias jnotebook="jupyter-notebook"
+
+# navigation (bestmile)
+alias platform='cd /Users/joachimmuth/Documents/platform'
+alias application='cd /Users/joachimmuth/Documents/applications'
+alias gateway='cd /Users/joachimmuth/Documents/applications/api-gw-server'
+alias operating_dashboard='cd /Users/joachimmuth/Documents/applications/web/fms'
+
+
+# server connection (cred stored in ~/.ssh)
+alias connect_parliamentviz="ssh root@178.62.67.149"
+alias cluster_ada="ssh jmuth@iccluster046.iccluster.epfl.ch"
+
+# export variable
+export SBT_OPTS="-Dsbt.override.build.repos=true -Xmx2G -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=2G -Xss2M"
+
+# added by Anaconda3 4.1.1 installer
+# Jupyter notebook
+export PATH="/Users/joachimmuth/anaconda3/bin:$PATH"
+
+# PySpark option for jupyter notebook
+export PYSPARK_DRIVER_PYTHON="jupyter"
+export PYSPARK_DRIVER_PYTHON_OPTS="notebook"
+export PYSPARK_PYTHON=python3

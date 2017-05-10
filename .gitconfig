@@ -1,10 +1,50 @@
+[user]
+	name = Joachim Muth
+	email = joachim.muth@bestmile.com
+
 [alias]
 
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
 	l = log --pretty=oneline -n 20 --graph --abbrev-commit
+	logg        = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+	logg-file   = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --name-status
+
+  # rebasing
+	rom = rebase -i origin/master
+	rum = rebase -i upstream/master
+	rod = rebase -i origin/develop
+
+	po = push origin
+	pu = push upstream
+  pf = push --force
+
+	fo = fetch origin
+	fu = fetch upstream
+  fa = fetch --all 
+
+	ra = rebase --abort
+	rc = rebase --continue
+  change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ \\\"$`echo $VAR`\\\" = '$OLD' ]]; then export $VAR='$NEW'; fi\" $@; }; f "
+
+	# undo
+	undo = reset HEAD~1 --mixed
+  rh   = reset --hard origin
+
+	# branch
+	co = checkout
+	cb = checkout -b
+
+	# commit
+	ca  = commit -a
+	cm  = commit -m
+	cam = commit -am
+	caa = commit -a --amend
+	caw = commit -a --message=WIP
+  a   = add .
 
 	# View the current working tree status using the short format
-	s = status -s
+	s = status
+	ss = status -s
 
 	# Show the diff between the latest commit and the current state
 	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
@@ -128,7 +168,7 @@
 [commit]
 
 	# https://help.github.com/articles/signing-commits-using-gpg/
-	gpgsign = true
+	# gpgsign = true
 
 [diff]
 
@@ -158,7 +198,7 @@
 	# Use the Git 1.x.x default to avoid errors on machines with old Git
 	# installations. To use `simple` instead, add this to your `~/.extra` file:
 	# `git config --global push.default simple`. See http://git.io/mMah-w.
-	default = matching
+	default = simple
 	# Make `git push` push relevant annotated tags when pushing branches out.
 	followTags = true
 
