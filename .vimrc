@@ -1,6 +1,9 @@
+" Use pathgen
+execute pathogen#infect()
+
 " Use the Solarized Dark theme
 set background=dark
-colorscheme solarized
+colorscheme desert
 let g:solarized_termtrans=1
 
 " Make Vim more useful
@@ -48,9 +51,11 @@ syntax on
 set cursorline
 " Make tabs as wide as two spaces
 set tabstop=2
+
 " Show “invisible” characters
-set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
-set list
+" set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
+" set list
+
 " Highlight searches
 set hlsearch
 " Ignore case of searches
@@ -104,3 +109,6 @@ if has("autocmd")
 	" Treat .md files as Markdown
 	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 endif
+
+" Highlight current line
+set cursorline

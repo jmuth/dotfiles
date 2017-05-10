@@ -1,0 +1,10 @@
+'.platform-darwin atom-text-editor':
+  'cmd-backspace': 'editor:delete-line'
+
+'atom-text-editor':
+  'ctrl-cmd-l': 'editor:auto-indent'
+  'cmd--': 'editor:toggle-line-comments'
+  'shift-enter': 'editor:newline-below'
+
+'atom-workspace':
+  'cmd-shift-w': 'tabs:close-all-tabs',
