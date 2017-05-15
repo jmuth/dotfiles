@@ -5,9 +5,10 @@
 [alias]
 
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
-	l = log --pretty=oneline -n 20 --graph --abbrev-commit
-	logg        = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
-	logg-file   = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --name-status
+  #	l = log --pretty=oneline -n 20 --graph --abbrev-commit
+  # l: log, lf: log files
+	l  = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+	lf = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --name-status
 
   # rebasing
 	rom = rebase -i origin/master
@@ -37,12 +38,13 @@
 	cb = checkout -b
 
 	# commit
+  c   = commit
 	ca  = commit -a
 	cm  = commit -m
 	cam = commit -am
 	caa = commit -a --amend
 	caw = commit -a --message=WIP
-  a   = add .
+  a   = add -A
 
 	# View the current working tree status using the short format
 	s = status
@@ -52,6 +54,8 @@
   #	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
   # install icdiff with 'brew install icdiff'
   d = icdiff
+  dsm = diff --stat master 
+  dsd = diff --stat develop
 
 	# `git di $number` shows the diff between the state `$number` revisions ago and the current state
 	di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
