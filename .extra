@@ -34,7 +34,7 @@ alias connect_parliamentviz="ssh root@178.62.67.149"
 alias cluster_ada="ssh jmuth@iccluster046.iccluster.epfl.ch"
 
 # export variable
-export SBT_OPTS="-Dsbt.override.build.repos=true -Xmx6G -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -Xss2M"
+export SBT_OPTS="-Dsbt.override.build.repos=true -Xmx4G -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -Xss2M -Xms256m"
 
 # added by Anaconda3 4.1.1 installer
 # Jupyter notebook
