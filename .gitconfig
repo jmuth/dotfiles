@@ -21,17 +21,21 @@
 	pu = push upstream
   pf = push --force
 
-	fo = fetch origin
-	fu = fetch upstream
-  fa = fetch --all 
+	fo  = fetch origin
+	fu  = fetch upstream
+  fa  = fetch --all 
+  fap = fetch --all --prune # delete remote branch no longer existing 
 
 	ra = rebase --abort
 	rc = rebase --continue
-  change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ \\\"$`echo $VAR`\\\" = '$OLD' ]]; then export $VAR='$NEW'; fi\" $@; }; f "
+	
+	# merge fast-forward only (no merge commit)
+ 	mff = merge --ff-only 
 
 	# undo
 	undo = reset HEAD~1 --mixed
-  rh   = reset --hard origin
+  rh   = reset --hard
+  rho  = reset --hard origin
 
 	# branch
 	co = checkout
@@ -53,9 +57,12 @@
 	# Show the diff between the latest commit and the current state
   #	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
   # install icdiff with 'brew install icdiff'
-  d = icdiff
-  dsm = diff --stat master 
-  dsd = diff --stat develop
+  d = icdiff                    # diff of unstagged
+  d1 = icdiff HEAD~1            # diff of last commit
+
+  # Satistic, count changed LOC (size of a PR)
+  stat = diff --stat 
+  statm = diff --stat origin/master
 
 	# `git di $number` shows the diff between the state `$number` revisions ago and the current state
 	di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
