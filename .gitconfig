@@ -48,7 +48,10 @@
 	cam = commit -am
 	caa = commit -a --amend
 	caw = commit -a --message=WIP
-  a   = add -A
+
+  # add
+  a  = add -A    # add all
+  ap = add -A -p # interactiv hunks adding
 
 	# View the current working tree status using the short format
 	s = status
@@ -58,7 +61,9 @@
   #	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
   # install icdiff with 'brew install icdiff'
   d = icdiff                    # diff of unstagged
-  d1 = icdiff HEAD~1            # diff of last commit
+  d1 = icdiff HEAD~1 HEAD       # diff of last commit
+  d2 = icdiff HEAD~2 HEAD~1     # diff penultimate commit    
+  d3 = icdiff HEAD~3 HEAD~2     # diff third last commit
 
   # Satistic, count changed LOC (size of a PR)
   stat = diff --stat 
