@@ -26,6 +26,8 @@ alias extra="vim ~/dotfiles/.extra"
 
 alias ls='ls -FGlAhp'                       # Preferred 'ls' implementation
 alias subl="open -a 'Sublime Text' "
+alias lineOfCode='git ls-files | xargs cat | wc -l'
+alias cl='clear'
 
 # =========================
 # ORIGINAL OH MY ZSH FILE
@@ -89,6 +91,10 @@ plugins=(git extract osx)
 # User configuration
 
 export PATH="/usr/local/git/bin:/sw/bin/:/usr/local/bin:/usr/local/:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin/:/opt/local/bin"
+
+# latex
+export PATH=$PATH:/Library/TeX/texbin
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
