@@ -65,18 +65,21 @@
   d2 = icdiff HEAD~2 HEAD~1     # diff penultimate commit    
   d3 = icdiff HEAD~3 HEAD~2     # diff third last commit
 
+  # Show commit
+  showtool = "!f() { git icdiff $1^ $1; }; f"
+
   # Satistic, count changed LOC (size of a PR)
   stat = diff --stat 
   statm = diff --stat origin/master
 
 	# `git di $number` shows the diff between the state `$number` revisions ago and the current state
-	di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
+	di = !"d() { git icdiff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
 
 	# Pull in remote changes for the current repository and all its submodules
 	pull-submodules = !"git pull; git submodule foreach git pull origin master"
 
 	# Clone a repository including all submodules
-	c = clone --recursive
+	clonerec = clone --recursive
 
 	# Commit all changes
 	ca = !git add -A && git commit -av
