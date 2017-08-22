@@ -5,7 +5,7 @@
 
 # navigation (private MBP)
 alias epfl='cd /Users/joachimmuth/Documents/EPFL/'
-alias evento='cd /Users/joachimmuth/Documents/EPFL/SwEngProject/team-localeventapp'
+# alias evento='cd /Users/joachimmuth/Documents/EPFL/SwEngProject/team-localeventapp'
 alias icloud='cd /Users/joachimmuth/Library/Mobile Documents/com~apple~CloudDocs'
 alias pcml='cd /Users/joachimmuth/Documents/EPFL/PCML'
 alias ada='cd /Users/joachimmuth/Documents/EPFL/ADA'
@@ -14,24 +14,23 @@ alias finance="cd /Users/joachimmuth/Google\ Drive/Principles\ of\ Finance_valen
 alias microeconomic="cd ~/Documents/EPFL/Micro-ecomonics"
 alias parliamentviz="cd ~/Documents/EPFL/ADA/parliament-viz"
 alias doc="cd ~/Documents"
-alias mac_preferences="cd ~/Documents/mac_preferences"
-alias netflix_and_chill="cd ~/Documents/EPFL/PCML/PCML_Netflix_and_Chill/"
+# alias mac_preferences="cd ~/Documents/mac_preferences"
+# alias netflix_and_chill="cd ~/Documents/EPFL/PCML/PCML_Netflix_and_Chill/"
 alias jnotebook="jupyter-notebook"
-alias doc="cd ~/Documents"
-alias em-adapter="cd ~/Documents/EM-adapter"
 
 # navigation (bestmile)
-alias platform='cd /Users/joachimmuth/Documents/platform'
-alias application='cd /Users/joachimmuth/Documents/applications'
-alias gateway='cd /Users/joachimmuth/Documents/api-gateway'
-alias operating_dashboard='cd /Users/joachimmuth/Documents/applications/web/fms'
-alias reset-update="sbt ';web/run-main com.bestmile.web.ApplicationAdmin reset ;web/run-main com.bestmile.web.ApplicationAdmin update'"
-alias bestmile="cd ~/.bestmile"
-alias docker-reset="docker-compose stop && docker-compose rm -f && docker-compose up -d && docker-compose start && docker ps -a"
+# alias platform='cd /Users/joachimmuth/Documents/platform'
+# alias application='cd /Users/joachimmuth/Documents/applications'
+# alias gateway='cd /Users/joachimmuth/Documents/api-gateway'
+# alias operating_dashboard='cd /Users/joachimmuth/Documents/applications/web/fms'
+# alias reset-update="sbt ';web/run-main com.bestmile.web.ApplicationAdmin reset ;web/run-main com.bestmile.web.ApplicationAdmin update'"
+# alias bestmile="cd ~/.bestmile"
+# alias docker-reset="docker-compose stop && docker-compose rm -f && docker-compose up -d && docker-compose start && docker ps -a"
+# alias em-adapter="cd ~/Documents/EM-adapter"
 
 # server connection (cred stored in ~/.ssh)
-alias connect_parliamentviz="ssh root@178.62.67.149"
-alias cluster_ada="ssh jmuth@iccluster046.iccluster.epfl.ch"
+# alias connect_parliamentviz="ssh root@178.62.67.149"
+# alias cluster_ada="ssh jmuth@iccluster046.iccluster.epfl.ch"
 
 # JAVA and SCALA option
 export SBT_OPTS="-Dsbt.override.build.repos=true -Xmx4G -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -Xss2M -Xms256m"
@@ -39,7 +38,7 @@ export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
 
 # added by Anaconda3 4.1.1 installer
 # Jupyter notebook
-export PATH="/Users/joachimmuth/anaconda3/bin:$PATH"
+# export PATH="/Users/joachimmuth/anaconda3/bin:$PATH"
 
 # PySpark option for jupyter notebook
 export PYSPARK_DRIVER_PYTHON="jupyter"
@@ -47,5 +46,5 @@ export PYSPARK_DRIVER_PYTHON_OPTS="notebook"
 export PYSPARK_PYTHON=python3
 
 # NVM link
-export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
+# export NVM_DIR="$HOME/.nvm"
+# . "/usr/local/opt/nvm/nvm.sh"
