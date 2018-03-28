@@ -45,6 +45,9 @@ export PYSPARK_DRIVER_PYTHON="jupyter"
 export PYSPARK_DRIVER_PYTHON_OPTS="notebook"
 export PYSPARK_PYTHON=python3
 
+# Python PATH
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+
 # NVM link
 # export NVM_DIR="$HOME/.nvm"
 # . "/usr/local/opt/nvm/nvm.sh"
